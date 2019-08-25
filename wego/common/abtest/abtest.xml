@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 所有ID在其所在层内必须唯一，跨层不要求唯一 -->
+<!-- layername只包含字母和下划线 layerid只包含数字-->
+<experiment>
+    <bucket_num>100000000</bucket_num>
+    <exp exp_id="0" exp_name="exp0" exp_rate="0.3" layered="0">exp0</exp>
+    <exp exp_id="1" exp_name="exp1" exp_rate="0.3" layered="0">exp1</exp>
+    <exp exp_id="2" exp_name="exp2" exp_rate="0.2" layered="1">
+        <layer layer_id="0" layer_name="exp2_layer0">
+            <layer layer_id="0" layer_name="exp2_layer0_sublayer0" layer_rate="0.2">exp2_layer0_sublayer0</layer>
+            <layer layer_id="1" layer_name="exp2_layer0_sublayer1" layer_rate="0.2">exp2_layer0_sublayer1</layer>
+            <layer layer_id="2" layer_name="exp2_layer0_sublayer2" layer_rate="0.6">exp2_layer0_sublayer2</layer>
+        </layer>
+        <layer layer_id="1" layer_name="exp2_layer1">
+            <layer layer_id="0" layer_name="exp2_layer1_sublayer0" layer_rate="0.8">exp2_layer1_sublayer0</layer>
+            <layer layer_id="1" layer_name="exp2_layer0_sublayer1" layer_rate="0.2">exp2_layer0_sublayer1</layer>
+        </layer>
+    </exp>
+    <exp exp_id="3" exp_name="exp3" exp_rate="0.2" layered="1">
+        <layer layer_id="0" layer_name="exp3_layer0">
+            <layer layer_id="0" layer_name="exp3_layer0_sublayer0" layer_rate="0.4">exp3_layer0_sublayer0</layer>
+            <layer layer_id="1" layer_name="exp3_layer0_sublayer1" layer_rate="0.6">exp3_layer0_sublayer1</layer>
+        </layer>
+        <layer layer_id="1" layer_name="exp3_layer1">
+            <layer layer_id="0" layer_name="exp3_layer1_sublayer0" layer_rate="0.5">exp3_layer1_sublayer0</layer>
+            <layer layer_id="1" layer_name="exp3_layer1_sublayer1" layer_rate="0.5">exp3_layer1_sublayer1</layer>
+        </layer>
+        <layer layer_id="2" layer_name="exp3_layer2">
+            <layer layer_id="0" layer_name="exp3_layer2_sublayer0" layer_rate="0.95">exp3_layer2_sublayer0</layer>
+            <layer layer_id="1" layer_name="exp3_layer2_sublayer1" layer_rate="0.05">exp3_layer2_sublayer1</layer>
+        </layer>
+    </exp>
+</experiment>
